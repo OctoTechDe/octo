@@ -1,50 +1,56 @@
-<style scoped>
-    .action-link {
-        cursor: pointer;
-    }
-
-    .m-b-none {
-        margin-bottom: 0;
-    }
-</style>
-
 <template>
+    <div class="block block-condensed">
+        <div class="app-heading app-heading-small">
+            <div class="title">
+                <h2>API</h2>
+                <p>Personal Access Tokens</p>
+            </div>
+            <div class="heading-elements">
+                <a class="btn btn-default btn-clean" @click="showCreateTokenForm"><span class="icon-key"></span> Create Token</a>
+            </div>
+        </div>
+        <div class="block-content">
 
 
-                        <a class="action-link" @click="showCreateTokenForm">
-                            Create New Token
-                        </a>
+
+
+            <!-- No Tokens Notice -->
+            <div class="alert alert-default alert-icon-block" v-if="tokens.length === 0">
+                <div class="alert-icon">
+                    <span class="icon-lamp"></span>
+                </div>
+                You have not created any personal access tokens.
+            </div>
+
+            <!-- Personal Access Tokens -->
+            <table class="table table-borderless" v-if="tokens.length > 0">
+                <thead>
+                <th>Name</th>
+                <th>Action</th>
+                </thead>
+
+                <tbody>
+                <tr v-for="token in tokens">
+                    <!-- Client Name -->
+                    <td style="vertical-align: middle;">
+                        {{ token.name }}
+                    </td>
+
+                    <!-- Delete Button -->
+                    <td style="vertical-align: middle;">
+                        <button class="btn btn-danger btn-icon-fixed" @click="revoke(token)"><span class="icon-delete"></span> Delete</button>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 
-                    <!-- No Tokens Notice -->
-                    <p class="m-b-none" v-if="tokens.length === 0">
-                        You have not created any personal access tokens.
-                    </p>
 
-                    <!-- Personal Access Tokens -->
-                    <table class="table table-borderless m-b-none" v-if="tokens.length > 0">
-                        <thead>
-                            <th>Name</th>
-                            <th></th>
-                        </thead>
 
-                        <tbody>
-                            <tr v-for="token in tokens">
-                                <!-- Client Name -->
-                                <td style="vertical-align: middle;">
-                                    {{ token.name }}
-                                </td>
-
-                                <!-- Delete Button -->
-                                <td style="vertical-align: middle;">
-                                    <a class="action-link text-danger" @click="revoke(token)">
-                                        Delete
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
 
 
         <!-- Create Token Modal -->

@@ -86,22 +86,7 @@
             <!-- START PAGE CONTAINER -->
             <div class="container container-boxed">
 
-                <form class="form-horizontal">
-                    <div class="block block-condensed">
-                        <div class="app-heading app-heading-small">
-                            <div class="title">
-                                <h2>API</h2>
-                                <p>Personal Access Tokens</p>
-                            </div>
-                            <div class="heading-elements">
-                                <a href="#" class="btn btn-default btn-clean"><span class="icon-key"></span> Create Token</a>
-                            </div>
-                        </div>
-                        <div class="block-content">
-                            @yield('content')
-                        </div>
-                    </div>
-                </form>
+                    @yield('content')
 
             </div>
             <!-- END PAGE CONTAINER -->
