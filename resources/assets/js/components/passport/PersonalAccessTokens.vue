@@ -1,13 +1,15 @@
 <template>
     <div class="block block-condensed">
+        <div class="block-heading">
         <div class="app-heading app-heading-small">
             <div class="title">
                 <h2>API</h2>
                 <p>Personal Access Tokens</p>
             </div>
             <div class="heading-elements">
-                <a class="btn btn-default btn-clean" @click="showCreateTokenForm"><span class="icon-key"></span> Create Token</a>
+                <a class="btn btn-default btn-clean btn-icon-fixed" @click="showCreateTokenForm"><span class="icon-key"></span> Create Token</a>
             </div>
+        </div>
         </div>
         <div class="block-content">
 
@@ -47,6 +49,26 @@
         </div>
     </div>
 
+<div class="block block-condensed">
+        <div class="block-heading">
+        <div class="app-heading app-heading-small">
+            <div class="title">
+                <h2>Documentation</h2>
+                <p>How to make API calls</p>
+            </div>
+        
+        </div>
+        </div>
+        <div class="block-content"></div>
+
+            <div class="block-divider-text">
+                                        Block divider text
+                                    </div>
+
+                                    
+           
+        </div>
+    </div>
 
 
 

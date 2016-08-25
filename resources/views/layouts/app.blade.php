@@ -45,7 +45,7 @@
                     <li>
                         <div class="contact contact-lg contact-ps-controls">
                             <div class="contact-container">
-                                <a href="#">{{ Auth::user()->name }}</a>
+                                <a href="#">Dominik Geimer</a>
                                 <span>Administrator</span>
                             </div>
                             <div class="contact-controls">
