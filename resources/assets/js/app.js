@@ -18,6 +18,10 @@ Vue.component(
     require('./components/User.vue'));
 
 Vue.component(
+    'users',
+    require('./components/Users.vue'));
+
+Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue')
 );

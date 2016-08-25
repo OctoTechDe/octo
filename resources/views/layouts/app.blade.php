@@ -74,8 +74,8 @@
                             <li class="openable active">
                                 <a href="#"><span class="icon-knife"></span> Administration</a>
                                 <ul>
-                                    <li><a href="pages-bank-main.html">API</a></li>
-                                    <li><a href="pages-bank-main.html">Users</a></li>
+                                    <li><a href="/home">API</a></li>
+                                    <li><a href="/users">Users</a></li>
                                 </ul>
                             </li>
                         </ul>
